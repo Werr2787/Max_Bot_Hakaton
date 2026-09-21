@@ -21,6 +21,7 @@ example_bot.py — демонстрация всех возможностей б
 import logging
 import os
 import time
+from Tikitak import TOKEN
 
 from max_bot import (
     Attachment, Bot, Button, Context, Keyboard, MaxAPIError,
@@ -31,7 +32,6 @@ logging.basicConfig(level=os.getenv("LOG_LEVEL", "INFO"),
                     format="%(asctime)s %(levelname)-7s %(name)s: %(message)s")
 log = logging.getLogger("example_bot")
 
-TOKEN = "f9LHodD0cOLXq3Ycv5c5b82ODmn0Wag_swstsBwgP0s0yYbBcUDl0CH4O0t4g1bdMnpmMwj9zJpMA_5hJPaT"#os.environ.get("MAX_BOT_TOKEN")
 if not TOKEN:
     raise SystemExit("Задайте переменную окружения MAX_BOT_TOKEN")
 
